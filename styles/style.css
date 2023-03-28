@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  --radius: 1rem;
+}
+body {
+  background-color: var(--Pale-blue);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.body-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.main-bg {
+  width: 100%;
+}
+.mobile-bg-container {
+  position: relative;
+}
+.mobile-bg {
+  display: none;
+}
+.card {
+  width: 20rem;
+  height: auto;
+  background-color: var(--Very-pale-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+  border-radius: var(--radius);
+  z-index: 1;
+}
+.bg-img {
+  border-top-right-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--Dark-blue);
+}
+.card-description {
+  width: 80%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--Desaturated-blue);
+}
+.details {
+  width: 75%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffff;
+  border-radius: var(--radius);
+  margin: 0 auto;
+}
+.plan {
+  font-size: 0.75rem;
+}
+.music-img-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.music-img {
+  width: 2rem;
+}
+.plan-type {
+  font-weight: 900;
+  color: var(--Dark-blue);
+  display: block;
+}
+.plan-value {
+  color: var(--Desaturated-blue);
+  font-size: 0.75rem;
+}
+.plan-change {
+  font-size: 0.75rem;
+  text-decoration: underline;
+  color: var(--Bright-blue);
+  font-weight: 700;
+}
+.plan-change:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+.btn {
+  width: 80%;
+  background-color: var(--Bright-blue);
+  border: none;
+  padding: 10px;
+  color: var(--Very-pale-blue);
+  font-weight: 900;
+  font-size: 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.25);
+}
+.btn:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+.btn-cancel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--Desaturated-blue);
+  margin-bottom: 1.5rem;
+}
+.btn-cancel:hover {
+  color: var(--Dark-blue);
+  cursor: pointer;
+}
+@media screen and (max-width: 375px) {
+  .main-bg {
+    display: none;
+  }
+  .mobile-bg {
+    width: 100%;
+    position: absolute;
+  }
+}
